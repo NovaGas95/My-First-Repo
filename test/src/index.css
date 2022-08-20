@@ -1,0 +1,226 @@
+/*These are out fonts that we need, and you gonna have to add them to body to make it global */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+
+/*###################    These are preleminary CSS modifications to make our life easier when adding styles later   ###################*/
+
+* {
+    /*First, you must remove all default browser margin and padding: */
+
+    margin: 0;
+    padding: 0;
+
+    /*Second, you must remove default border and outline:  */
+
+    border: 0;
+    outline: 0;
+
+    /*Third, you must remove default list bullets and text decorations (like link underline for example) :  */
+
+    list-style: none;
+    text-decoration: none;
+
+    /*The box-sizing property allows us to include the padding and border in an element's total width and height, but NOT inputs !!!*/
+
+    box-sizing: border-box;
+
+}
+
+
+
+:root {
+
+    /*Let's add some CSS Variables: --nameOfTheVariable: Value; */
+
+    --color-bg: #1f1f38;
+    --color-bg-variant: #2c2c6f;
+    --color-primary: #4db5ff;
+    --color-primary-variant: rgb(77, 181, 255, 0.4);
+    --color-white: #fff;
+    --color-light: rgb(255, 255, 255, 0.6);
+
+    /*Declaring variables allows you to make changes to the entire site's colors(or any other variable such as width or transitions ..) 
+      without changing each class's color on its own : Global change of colors !! Makes your life easier ;)
+    */
+
+    /*Let's add some Container width variable which we will use to identify our media query on diffrent
+    devices (lg = large, md = medium, sm = small)*/
+
+    --container-width-lg: 75%;
+    --container-width-md: 86%;
+    --container-width-sm: 90%;
+
+    /*Transition Variable : */
+    --transition: all 400ms ease;
+    /* CSS transitions allows you to change property values smoothly, over a given duration, in other words : Apply Animations :) ;) =) :D */
+
+}
+
+html {
+    /*The scroll-behavior property specifies whether to smoothly animate the scroll position,
+    instead of a straight jump, when the user clicks on a link within a scrollable box.
+    It should always be included in the html tag in css to make it a Global peoperty to the browser*/
+
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+
+    /*This pseudo element is used to customize the right side browser's scrollbar*/
+    display: none;
+}
+
+body {
+
+    /*Down here, we used our font-family that we've imported on the top of the page.
+    You just have to copy it from the using the import option in google fonts => font-family
+    */
+
+    font-family: 'Poppins', sans-serif;
+
+    /*Here's an application to our recently created CSS Variables to our background:
+    just type out var() and include your variable inside the braces to apply it, EASY !!!
+    */
+
+    background-color: var(--color-bg);
+
+    /*Global text color: */
+
+    color: var(--color-white);
+
+    /*Global text line-height: */
+
+    line-height: 1.7;
+
+    /*Let's add a background image, and please note that 
+    it displays as a mosaique by default. You can change 
+    that by the way.
+    */
+
+    background-image: url(../src/assets/bg-texture.png);
+
+}
+
+
+/*       ###################       These Are General Styles       ###################*/
+
+
+
+/*General container Class : */
+
+.container {
+    width: var(--container-width-lg);
+    /*We will change our width later on each specific element on the page using media query*/
+    margin: 0 auto;
+    /*This will make the object will sit centrally within it's parent container.*/
+}
+
+/*General Titles and Section Classes : */
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-weight: 500;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+section {
+    margin-top: 8rem;
+}
+
+section>h2,
+section>h5 {
+    text-align: center;
+    color: var(--color-light);
+
+}
+
+section>h2 {
+    color: var(--color-primary);
+    margin-bottom: 3rem;
+}
+
+/*A Custom Text Light Class that we will frequently use throughout our website : */
+
+.text-light {
+    color: var(--color-light);
+}
+
+/*A Global Custom Anchor Class : */
+
+a {
+    color: var(--color-primary);
+    transition: var(--transition);
+}
+
+a:hover {
+    color: var(--color-white);
+}
+
+/*A Global Custom Button Class*/
+
+.btn {
+    width: max-content;
+    /*Try to get more infos about this particular property later as I can't figure it out*/
+    display: inline-block;
+    color: var(--color-primary);
+    padding: 0.75rem 1.2rem;
+    cursor: pointer;
+    border-radius: 0.4rem;
+    border: 1px solid var(--color-primary);
+    transition: var(--transition);
+}
+
+.btn:hover {
+    background-color: var(--color-white);
+    color: var(--color-bg);
+    border-color: transparent;
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+    color: var(--color-bg);
+}
+
+/*A Global Custom img Class*/
+img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+    /*If we use object-fit: cover; the image will keep its aspect ratio and fill the given dimension.
+    The image will be clipped to fit. 
+    This looks (to me) like the best approach to deal with images in CSS as far as this moment.*/
+}
+
+
+/*       ###################       Media Queries For Medium Devices       ###################*/
+
+@media screen and (max-width : 1024px)  {
+    .container {
+        width: var(--container-width-md);
+    }
+
+    section {
+        margin-top: 6rem;
+    }
+}
+
+/*       ###################       Media Queries For Small Devices       ###################*/
+
+@media screen and (max-width : 600px)  {
+    .container {
+        width: var(--container-width-sm);
+    }
+
+    section > h2 {
+        margin-bottom: 2rem;
+    }
+}
+
+
+

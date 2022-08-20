@@ -1,0 +1,106 @@
+header {
+    height: 100vh;
+    padding-top: 2rem;
+    overflow: hidden;
+    /*The overflow property specifies whether to clip the content or to add scrollbars 
+    when the content of an element is too big to fit in the specified area.*/
+}
+
+.header__container {
+    text-align: center;
+    /*Centers all of the elements inside the container */
+    height: 100%;
+    /*???*/
+    position: relative;
+    /*This basically makes the element adjustable using the left, bottom, ... keywords*/
+    /*Return W3schools for more infos about positions*/
+}
+
+
+
+/*########################             CTA                   ########################*/
+
+.cta {
+    margin-top: 1.5rem;
+    display: flex;
+    gap: 1.2rem;
+    justify-content: center;
+}
+
+
+/*########################             Socials                   ########################*/
+
+.header__socials {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+    position: absolute;
+    left: 0;
+    bottom: 3rem;
+}
+
+.header__socials::after {
+    /*This is used to add "Content" after our selected class, check w3schools for more info about 
+    more content values in the ::after and ::before CSS properties*/
+    content: '';
+    /*our content will be string (it's like making a div that extends from the parent .. ish :3 )*/
+    width: 1px;
+    height: 2rem;
+    background-color: var(--color-primary);
+    /*we just gave our extended div a width, height and bg color to make it look like a blue stripe.*/
+}
+
+
+/*########################             ME (the main header image)                   ########################*/
+
+.me {
+    background: linear-gradient(var(--color-primary),transparent);
+    width: 22rem;
+    height: 30rem;
+    position: absolute;
+    left: calc(50% - 11rem);
+    margin-top: 4rem;
+    border-radius: 12rem 12rem 0 0 ;
+    overflow: hidden;
+    padding: 5rem 1.5rem 1.5rem 1.5rem;
+}
+
+
+/*########################             Scroll Down                   ########################*/
+
+.scroll__down {
+    position: absolute;
+    right: -2.3rem;
+    bottom: 5rem;
+    transform: rotate(90deg);
+    font-size: 0.9rem;
+    font-weight: 300;
+}
+
+
+/*       ###################       Media Queries For Medium Devices       ###################*/
+
+@media screen and (max-width : 1024px)  {
+    header {
+       height: 68vh; 
+       /*This will make the height smaller on Tablets*/
+    }
+}
+
+/*       ###################       Media Queries For Small Devices       ###################*/
+
+@media screen and (max-width : 600px)  {
+    header {
+        height: 100vh; 
+     }
+    .header__socials , .scroll__down {
+        display: none;
+        /*This will make the "Socials" and "Scroll Down" disappear once the width is set to phones sizes.*/
+    }
+}
+
+
+
+
+

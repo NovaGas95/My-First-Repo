@@ -1,0 +1,38 @@
+nav {
+    background: rgba(0, 0, 0, 0.3);
+    width: max-content;
+    display: block;
+    padding: 0.7rem 1.7rem;
+    z-index: 2;
+    /*The z-index property specifies the stack order of an element(like layers in photoshop).*/
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    /*The transform property applies a 2D or 3D transformation to an element. 
+     This property allows you to rotate, scale, move, skew, etc., elements.*/
+    bottom: 2rem;
+    display: flex;
+    gap: 0.8rem;
+    border-radius: 3rem;
+    backdrop-filter: blur(15px);
+    /*The backdrop-filter property is used to apply a graphical effect to the area behind an element.
+     Tip: To see the effect, the element or its background must be at least partially transparent.*/
+}
+
+nav a {
+    background: transparent;
+    padding: 0.9rem;
+    border-radius: 50%;
+    display: flex;
+    color: var(--color-light);
+    font-size: 1.1rem;
+}
+
+nav a:hover {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+nav a.active {
+    background: var(--color-bg);
+    color: var(--color-white);
+}
