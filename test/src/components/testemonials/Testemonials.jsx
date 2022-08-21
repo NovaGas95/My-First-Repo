@@ -3,12 +3,17 @@ import './testemonials.css'
 import data from './data'
 
 
+
+
+
+
 const Testemonials = () => {
   return (
     <section id='testemonials'>
       <h5>Review From Clients</h5>
       <h2>Testemonials</h2>
       <div className="container testemonials__container">
+
         {
           data.map(
             ({ avatar, name, review }, index) => {
@@ -25,7 +30,7 @@ const Testemonials = () => {
             }
           )
         }
-      </div>
+      </div >
     </section>
   )
 }

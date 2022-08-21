@@ -34,8 +34,6 @@
     }
 }
 
-/*       ###################       Media Queries For Small Devices       ###################*/
-
 @media screen and (max-width : 600px) {
     .container.testemonials__container {
         width: var(--container-width-sm);
