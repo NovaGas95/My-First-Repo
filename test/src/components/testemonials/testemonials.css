@@ -1,6 +1,13 @@
 .testemonials__container {
-    width: 40%;
+    display: grid;
+    grid-template-columns:3fr;
+    gap: 2rem;
+    max-width: 40rem;
+    max-height: 70rem;
+    overflow: hidden;
 }
+
+
 
 .client__avatar {
     width: 4rem;
@@ -17,7 +24,16 @@
     padding: 2rem;
     border-radius: 2rem;
     user-select: none;
+    width: 100%;
+    transition: var(--transition);
+    border: 0.1rem solid var(--color-primary-variant);
+
 }
+
+.testemonial:hover {
+    background: transparent;
+}
+
 
 .client__review {
     color: var(--color-light);
