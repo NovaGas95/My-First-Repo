@@ -9,7 +9,7 @@ import { useState } from 'react'
 
 const Testemonials = () => {
 
-  const [slide, setSlide] = useState(data[0])
+
   return (
     <section id='testemonials'>
       <h5>Review From Clients</h5>
