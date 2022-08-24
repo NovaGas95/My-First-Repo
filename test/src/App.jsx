@@ -8,6 +8,7 @@ import Nav from './components/nav/Nav'
 import Portfolio from './components/portfolio/Portfolio'
 import Services from './components/services/Services'
 import Testemonials from './components/testemonials/Testemonials'
+import 'antd/dist/antd.css';
 
 
 const App = () => {

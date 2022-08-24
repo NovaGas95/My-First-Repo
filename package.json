@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "antd": "^4.22.7",
     "icons": "^1.0.0",
     "react-icons": "^4.4.0",
     "sass": "^1.54.5"
