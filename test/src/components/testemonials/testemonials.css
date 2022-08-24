@@ -7,6 +7,10 @@
     overflow: hidden;
 }
 
+.client__name {
+    color: var(--color-light);
+}
+
 
 
 .client__avatar {
