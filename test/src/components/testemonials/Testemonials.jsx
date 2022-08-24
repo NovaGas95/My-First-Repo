@@ -15,7 +15,7 @@ const Testemonials = () => {
       <h5>Review From Clients</h5>
       <h2>Testemonials</h2>
       <div>
-        <Carousel  dotPosition='bottom' className=" dotsClass testemonials__container">
+        <Carousel  dotPosition='bottom' autoplay className=" dotsClass testemonials__container">
           {data.map(({ id, avatar, name, review }) => {
             return (
               <article key={id} className='testemonial'>
